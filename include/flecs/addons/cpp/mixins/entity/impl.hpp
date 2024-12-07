@@ -121,7 +121,7 @@ inline void entity_view::each(const Func& func) const {
     }
 
     const ecs_id_t *ids = type->array;
-    int32_t count = type->count;
+    int32_t count = type->count - 1;
 
     for (int i = 0; i < count; i ++) {
         ecs_id_t id = ids[i];
